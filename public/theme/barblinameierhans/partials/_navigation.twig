@@ -1,0 +1,17 @@
+<ul class="md:flex justify-between text-3xl md:text-4xl xl:text-6xl">
+{% for item in menu %}
+    <li>
+        {% if item.submenu | length > 0 %}
+            <ul>
+            {% for item in item.submenu %}
+                <li class="{{ item.class }}">
+                    <a href="{{ item.link }}" class="{{ item.class }} md:px-3 block mb-4 {{ item|current ? 'bg-black text-white' : 'hover:bg-black hover:text-white' }}">{{item.label}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <a href="{{ item.link }}" class="{{ item.class }} md:px-3 block mb-4 {{ item|current ? 'bg-black text-white' : 'hover:bg-black hover:text-white' }}">{{item.label}}</a>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>

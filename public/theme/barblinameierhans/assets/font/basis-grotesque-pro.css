@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('BasisGrotesquePro-MediumItalic.eot');
+    src: local('Basis Grotesque Pro Medium Italic'), local('BasisGrotesquePro-MediumItalic'),
+        url('BasisGrotesquePro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('BasisGrotesquePro-MediumItalic.woff2') format('woff2'),
+        url('BasisGrotesquePro-MediumItalic.woff') format('woff'),
+        url('BasisGrotesquePro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('BasisGrotesquePro-BoldItalic.eot');
+    src: local('Basis Grotesque Pro Bold Italic'), local('BasisGrotesquePro-BoldItalic'),
+        url('BasisGrotesquePro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BasisGrotesquePro-BoldItalic.woff2') format('woff2'),
+        url('BasisGrotesquePro-BoldItalic.woff') format('woff'),
+        url('BasisGrotesquePro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('BasisGrotesquePro-Bold.eot');
+    src: local('Basis Grotesque Pro Bold'), local('BasisGrotesquePro-Bold'),
+        url('BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BasisGrotesquePro-Bold.woff2') format('woff2'),
+        url('BasisGrotesquePro-Bold.woff') format('woff'),
+        url('BasisGrotesquePro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: url('BasisGrotesquePro-Medium.eot');
+    src: local('Basis Grotesque Pro Medium'), local('BasisGrotesquePro-Medium'),
+        url('BasisGrotesquePro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BasisGrotesquePro-Medium.woff2') format('woff2'),
+        url('BasisGrotesquePro-Medium.woff') format('woff'),
+        url('BasisGrotesquePro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

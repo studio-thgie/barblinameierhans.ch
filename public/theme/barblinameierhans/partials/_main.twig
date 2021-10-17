@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ htmllang() }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%- if record|default and record.title -%}
+            {{- record.title ~ ' – ' -}}
+        {%- endif -%}
+        {{- config.get('general/sitename') -}}
+        {%- if record|default == null and config.has('general/payoff') -%}
+            {{- ' – ' ~ config.get('general/payoff') -}}
+        {%- endif -%}
+    </title>
+    <link rel="stylesheet" href="{{ asset('assets/font/basis-grotesque-pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/barblinameierhans.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/base.css') }}">
+
+    <script defer src="{{ asset('assets/alpinejs@3.4.2.min.js') }}"></script>
+</head>
+<body class="p-4 md:p-8 xl:p-16"
+    x-data="{ intro: true }" x-init="setTimeout(() => { intro = false; }, 1000)">
+
+    {% block header %}{% endblock header %}
+
+    <nav class="pb-5 md:pb-10 xl:pb-28">
+        {{ menu('main', 'partials/_navigation.twig') }}
+    </nav>
+
+    <main>
+    {% block body %}{% endblock body %}
+    </main>
+
+</body>
+</html>
