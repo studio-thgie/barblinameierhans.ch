@@ -3,12 +3,12 @@
 
 main:
   - label: News
-    link: /seiten/news
+    link: /news
   - submenu:
         - label: Compositions
-          link: compositions
+          link: /compositions
         - label: Installations
-          link: Installations
+          link: /installations
   - submenu:
         - label: Biography
           link: biography

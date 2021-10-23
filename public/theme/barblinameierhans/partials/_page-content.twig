@@ -1,0 +1,8 @@
+{% if page.title != '' %}
+<h2 class="text-3xl md:text-5xl xl:text-6xl">{{ page.title }}</h2>
+{% endif %}
+{% if page.body != '' %}
+<div class="text-base md:text-xl xl:text-3xl mb-5">
+    {{ page.body }}
+</div>
+{% endif %}

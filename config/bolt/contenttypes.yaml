@@ -50,9 +50,58 @@ seiten:
         slug:
             type: slug
             uses: title
+        template:
+            type: templateselect
+            filter: 'page*.twig'
+    taxonomy: [ groups ]
+    records_per_page: 5
+    order: id
+
+news:
+    name: News
+    singular_name: News
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        image:
+            type: image
+            label: Highlighted image
+        body:
+            type: redactor
+            height: 300px
+        slug:
+            type: slug
+            uses: title
     record_template: page.twig
     taxonomy: [ groups ]
     records_per_page: 5
+    order: id
+
+projects:
+    name: Projekte
+    singular_name: Projekt
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        category:
+            type: select
+            values: [ Composition, Installation ]
+        image:
+            type: image
+            label: Highlighted image
+        body:
+            type: redactor
+            height: 300px
+        slug:
+            type: slug
+            uses: title
+    record_template: page.twig
+    taxonomy: [ groups ]
+    records_per_page: 10
     order: id
 
 # Possible field types:

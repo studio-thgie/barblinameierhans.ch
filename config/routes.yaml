@@ -59,3 +59,15 @@ project:
 #   methods: [GET|POST]
 #   defaults:
 #     _controller: Bolt\Controller\Frontend\DetailController::record
+
+installations:
+  path: /installations
+  defaults:
+    _controller: Bolt\Controller\Frontend\TemplateController::template
+    templateName: installations.twig
+  
+compositions:
+  path: /compositions
+  defaults:
+    _controller: Bolt\Controller\Frontend\TemplateController::template
+    templateName: compositions.twig

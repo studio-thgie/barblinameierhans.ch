@@ -1,0 +1,10 @@
+{% extends 'partials/_main.twig' %}
+
+{% block body %}
+
+<div class="xl:px-20">
+    {% setcontent projects = 'projekt' where { category: 'Composition' } %}
+    {% include 'partials/_projects.twig' %}
+</div>
+
+{% endblock body %}
