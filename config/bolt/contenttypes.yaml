@@ -87,19 +87,22 @@ projects:
             type: text
             class: large
             group: content
+        subtitle:
+            type: text
         category:
             type: select
             values: [ Composition, Installation ]
-        image:
-            type: image
-            label: Highlighted image
+        gallery:
+            type: imagelist
+        video:
+            type: embed
         body:
             type: redactor
             height: 300px
         slug:
             type: slug
             uses: title
-    record_template: page.twig
+    record_template: project.twig
     taxonomy: [ groups ]
     records_per_page: 10
     order: id

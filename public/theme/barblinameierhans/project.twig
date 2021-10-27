@@ -1,0 +1,29 @@
+{% extends 'partials/_main.twig' %}
+
+{% block body %}
+
+<div class="md:flex xl:px-20">
+    <div class="md:pr-5 xl:pr-16 md:w-2/5">
+        <div class="mb-10">
+            {% setcontent projects = 'projekt' where { category: record.category } %}
+            {% for project in projects %}
+                <a href="{{ project|link }}">
+                    {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
+                </a>
+            {% endfor %}
+        </div>
+        <div class="flex justify-between mb-10">
+            {% if record.video %}
+                <a class="w-1/2 inline text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#video">Video</a>
+            {% endif %}
+            {% if record.gallery %}
+                <a class="w-1/2 inline text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#gallery">Photo</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="md:pl-5 xl:pl-16 md:w-3/5">
+        {% include 'partials/_page-content.twig' with {'page': record} %}
+    </div>
+</div>
+
+{% endblock body %}
