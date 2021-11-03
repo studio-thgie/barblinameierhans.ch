@@ -7,6 +7,11 @@
             {% endfor %}
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
-            {% include 'partials/_page-image.twig' with {'page': projects|first} %}
+            {% if projects|first is not empty %}
+                {% set project = projects|first %}
+                {% if project.image is not empty %}
+                    {% include 'partials/_page-image.twig' with {'page': projects|first} %}
+                {% endif %}
+            {% endif %}
         </div>
     </div>

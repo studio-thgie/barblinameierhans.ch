@@ -4,13 +4,23 @@
 
 <div class="md:flex xl:px-20">
     <div class="md:pr-5 xl:pr-16 md:w-2/5">
-        <div class="mb-10">
-            {% setcontent projects = 'projekt' where { category: record.category } %}
+        <div class="mb-10" x-data="{ open: false }">
+            {% setcontent projects = 'project' where { category: record.category } %}
+            <ul>
             {% for project in projects %}
-                <a href="{{ project|link }}">
-                    {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
-                </a>
+                <li class="relative"
+                    :class="open ? 'block' : '{% if not project|current %}hidden md:block{% endif %}'">
+                    <a href="{{ project|link }}">
+                        {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
+                    </a>
+                    {% if project|current %}
+                        <button type="button"
+                            class="absolute right-0 top-0 px-3 text-white text-3xl cursor-pointer md:hidden"
+                            @click="open = ! open">x</button>
+                    {% endif %}
+                </li>
             {% endfor %}
+            </ul>
         </div>
         <div class="flex justify-between mb-10">
             {% if record.video %}

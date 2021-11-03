@@ -11,8 +11,8 @@ main:
           link: /installations
   - submenu:
         - label: Biography
-          link: biography
+          link: /pages/biography
         - label: Press
-          link: press
+          link: /pages/press
   - label: Contact
-    link: contact
+    link: /pages/contact

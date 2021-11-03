@@ -1,0 +1,32 @@
+{% set current = item|current %}
+
+{% if record is defined %}
+    {% if record.title == item.label %}
+        {% set current = true %}
+    {% endif %}
+
+    {% if record.title in ['Impressum', 'Copyright', 'Notice of liability'] and item.label == 'Contact' %}
+        {% set current = true %}
+    {% endif %}
+
+    {% if record.category is defined %}
+        {% if record.category == 'Composition' and item.label == 'Compositions' %}
+            {% set current = true %}
+        {% endif %}
+        {% if record.category == 'Installation' and item.label == 'Installations' %}
+            {% set current = true %}
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+<a href="{{ item.link }}"
+    class="{{ item.class }} md:px-3 block mb-4 {{ current ? 'bg-black text-white' : 'hover:bg-black hover:text-white' }}"
+    :class="open ? 'block' : '{% if not current %}hidden md:block{% endif %}'">
+    {{item.label}}
+</a>
+
+{% if current %}
+    <button type="button"
+        class="absolute right-0 top-0 px-3 text-white text-3xl cursor-pointer md:hidden"
+        @click="open = ! open">x</button>
+{% endif %}
