@@ -6,7 +6,7 @@
     {% setcontent news = 'news' latest limit 5 %}
     {% for news_entry in news %}
         <div class="w-full md:flex mb-8 md:mb-12 xl:mb-16">
-            <div class="md:pr-5 xl:pr-16 md:w-1/2">
+            <div class="md:pr-5 xl:pr-16 md:w-1/2 mb-4">
                 {% if loop.index % 2 %}
                     {% include 'partials/_page-content.twig' with {'page': news_entry} %}
                 {% else %}
