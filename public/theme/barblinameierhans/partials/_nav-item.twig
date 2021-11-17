@@ -1,6 +1,9 @@
 {% set current = item|current %}
+{% set start = false %}
 
 {% if record is defined %}
+    {% set start = record.contentType == 'homepage' ? true : false %}
+
     {% if record.title == item.label %}
         {% set current = true %}
     {% endif %}
@@ -20,13 +23,16 @@
 {% endif %}
 
 <a href="{{ item.link }}"
-    class="{{ item.class }} md:px-3 block mb-4 {{ current ? 'bg-black text-white' : 'hover:bg-black hover:text-white' }}"
-    :class="open ? 'block' : '{% if not current %}hidden md:block{% endif %}'">
+    class="{{ item.class }} block pt-1 px-1 md:px-3 mb-4 {{ current ? 'bg-black text-white' : 'hover:bg-black hover:text-white' }}"
+    :class="open ? 'block' : '{% if not current and not start %}hidden md:block{% endif %}'">
     {{item.label}}
 </a>
 
 {% if current %}
     <button type="button"
-        class="absolute right-0 top-0 px-3 text-white text-3xl cursor-pointer md:hidden"
-        @click="open = ! open">x</button>
+        class="absolute h-full right-0 top-0 px-3 transition-all text-white text-3xl cursor-pointer md:hidden"
+        :style="`transform: rotate(${open ? '0' : '45'}deg);`"
+        @click="open = ! open">
+        <img src="{{ asset('assets/img/cross.svg') }}" alt="Close Submenu">    
+    </button>
 {% endif %}

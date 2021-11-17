@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Basis Grotesque Pro';
     font-weight: 500;
@@ -11,4 +15,21 @@ h1 {
     top: 0;
     width: 100%;
     height: 100%;
+}
+
+.swiper-button-prev::after, .swiper-rtl .swiper-button-next::after,
+.swiper-button-next::after, .swiper-rtl .swiper-button-prev::after {
+    content: none;
+}
+
+.swiper-pagination-bullet-active {
+    background: black;
+}
+.swiper-button-prev {
+    left: -40px;
+    top: 16px;
+}
+.swiper-button-next {
+    right: -40px;
+    top: 16px;
 }

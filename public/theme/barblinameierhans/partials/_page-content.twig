@@ -5,26 +5,30 @@
 <h3 class="text-2xl md:text-3xl xl:text-4xl mt-3 mb-20">{{ page.subtitle }}</h3>
 {% endif %}
 {% if page.body != '' %}
-<div class="text-base md:text-xl xl:text-3xl mb-5">
+<div class="text-base md:text-xl xl:text-3xl mt-20">
     {{ page.body }}
 </div>
 {% endif %}
 
 
-{% if page.gallery %}
-<div id="gallery" class="text-base md:text-xl xl:text-3xl mb-5">
+{% if page.gallery and page.gallery|length %}
+<div id="gallery" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-20">
     <div class="swiper swiper-gallery">
       <div class="swiper-wrapper">
         {% for image in record.gallery %}
-            {{ image|popup() }}
             <div class="swiper-slide">
                 <img src="{{ image|thumbnail(1200) }}" alt="{{ image.alt|default(page|title) }}">
             </div>
         {% endfor %}
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper-button-next">
+    <img src="{{ asset('assets/img/arrow.svg') }}" style="transform: rotate(180deg);"  alt="Next Slide">
+    </div>
+    <div class="swiper-button-prev">
+    <img src="{{ asset('assets/img/arrow.svg') }}" alt="Previous Slide">
     </div>
 </div>
 <script>
@@ -33,6 +37,7 @@
             slidesPerView: 1,
             loop: true,
             autoHeight: true,
+            spaceBetween: 25,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -46,7 +51,7 @@
 </script>
 {% endif %}
 
-{% if page.video %}
+{% if page.video and page.video.raw != '' %}
 <div id="video" class="text-base md:text-xl xl:text-3xl mb-5">
     <div class="relative" style="padding-top: 56.25%">
         {{ page.video.html|raw }}

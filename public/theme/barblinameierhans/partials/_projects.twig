@@ -7,11 +7,15 @@
             {% endfor %}
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
-            {% if projects|first is not empty %}
-                {% set project = projects|first %}
-                {% if project.image is not empty %}
-                    {% include 'partials/_page-image.twig' with {'page': projects|first} %}
+            {% set rendered_image = false %}
+            {% for project in projects %}
+                {% if not rendered_image %}
+                    {% if project.gallery %}
+                        {% set image = project.gallery|first %}
+                        <img src="{{ image|thumbnail(1200) }}">
+                        {% set rendered_image = true %}
+                    {% endif %}
                 {% endif %}
-            {% endif %}
+            {% endfor %}
         </div>
     </div>
