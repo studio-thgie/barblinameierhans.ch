@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="fixed top-0 left-0 w-screen h-screen bg-white flex flex-wrap content-center justify-around"
-    x-show="intro" x-transition>
+    x-show="intro" x-transition x-init="setTimeout(() => { intro = false; }, 1000)">
     <span class="text-4xl sm:text-6xl lg:text-8xl">barblina meierhans</span>
 </div>
 
