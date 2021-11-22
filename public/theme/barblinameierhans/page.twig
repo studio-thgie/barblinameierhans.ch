@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="md:flex">
-    <div class="pr-2 md:pr-4 lg:pr-8 xl:pr-16 md:w-2/5">
+    <div class="sm:pr-2 md:pr-4 lg:pr-8 xl:pr-16 md:w-2/5">
         <div class="mb-10">
             {% set related_records = record|related %}
             {% if related_records is not empty and related_records|length > 1 %}
@@ -15,7 +15,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="pl-2 md:pl-4 lg:pl-8 xl:pl-16 md:w-3/5">
+    <div class="sm:pl-2 md:pl-4 lg:pl-8 xl:pl-16 md:w-3/5">
         {% if record.image is not empty %}
         <div class="mb-10">
             {% include 'partials/_page-image.twig' with {'page': record} %}

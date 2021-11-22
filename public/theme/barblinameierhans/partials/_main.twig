@@ -21,11 +21,22 @@
     <script defer src="{{ asset('assets/alpinejs@3.4.2.min.js') }}"></script>
 </head>
 <body class="p-4 md:p-8 xl:p-16"
-    x-data="{ intro: true }" x-init="setTimeout(() => { intro = false; }, 1000)">
+    x-data="{ intro: true, header: false }" x-init="setTimeout(() => { intro = false; }, 1000)">
 
-    {% block header %}{% endblock header %}
+    {% block header %}
+    
+        <h1 class="fixed top-0 transform transition w-full text-6xl text-center md:text-8xl mb-24 font-medium" :class="header ? 'translate-y-0' : '-translate-y-full'">
+            barblina meierhans
 
-    <nav class="pb-5 md:pb-10 xl:pb-28">
+            <button class="absolute -bottom-10 left-1/2 transition" style="width: 24px;"
+                @click="header = ! header">
+                <img src="{{ asset('assets/img/arrow.svg') }}" :style="`transform: rotate(${header ? '' : '-'}90deg);`" alt="Previous Slide">
+            </button>
+        </h1>
+    
+    {% endblock header %}
+
+    <nav id="nav" class="md:pb-10 xl:pb-28 pt-0 transition" :class="header ? 'pt-28' : ''">
         {{ menu('main', 'partials/_navigation.twig') }}
     </nav>
 

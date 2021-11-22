@@ -1,10 +1,16 @@
     <div class="w-full md:flex mb-8 md:mb-12 xl:mb-16">
         <div class="md:pr-5 xl:pr-16 md:w-1/2">
+            <ul>
             {% for project in projects %}
-                <a href="{{ project|link }}">
-                    {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
-                </a>
+                <li>
+                    <div class="block md:inline-block relative">
+                        <a href="{{ project|link }}">
+                            {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
+                        </a>
+                    </div>
+                </li>
             {% endfor %}
+            </ul>
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
             {% set rendered_image = false %}

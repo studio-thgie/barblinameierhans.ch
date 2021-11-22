@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="70" height="81" viewBox="0 0 70 81">
-  <path id="Polygon_1" data-name="Polygon 1" d="M40.5,0,81,70H0Z" transform="translate(0 81) rotate(-90)"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Union_1" transform="matrix(1,0,0,1,-946.42,-530.263)">
+        <path d="M962.104,539.825L952.541,549.387L950.42,547.266L957.861,539.825L950.42,532.384L952.541,530.263L962.104,539.825Z" style="fill-rule:nonzero;"/>
+    </g>
 </svg>
