@@ -25,11 +25,10 @@
 
     {% block header %}
     
-        <h1 class="fixed top-0 left-0 transform transition w-full text-6xl text-center md:text-8xl mb-24 font-medium" :class="header ? 'translate-y-0' : '-translate-y-full'">
+        <h1 class="fixed -top-2 left-0 transform w-full text-6xl text-center md:text-8xl font-medium" :class="header ? 'translate-y-4' : '-translate-y-full'" @mouseover="header = true" @mouseout="header = false" x-init="setTimeout(() => { $el.classList.add('transition'); }, 250)">
             barblina meierhans
 
-            <button class="absolute -bottom-10 left-1/2 transition" style="width: 24px;"
-                @click="header = ! header">
+            <button class="absolute -bottom-8 left-1/2 transition" style="width: 20px;">
                 <img src="{{ asset('assets/img/arrow.svg') }}" :style="`transform: rotate(${header ? '' : '-'}90deg);`" alt="Previous Slide">
             </button>
         </h1>
