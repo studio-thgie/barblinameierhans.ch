@@ -10,10 +10,10 @@ body {
 h1 {
     font-weight: 700;
 }
-p {
+.text-base p {
     margin-bottom: 2rem;
 }
-ul {
+.text-base ul {
     list-style-type: '–';
     margin-bottom: 2rem;
 }
