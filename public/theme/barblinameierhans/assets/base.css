@@ -10,6 +10,13 @@ body {
 h1 {
     font-weight: 700;
 }
+p {
+    margin-bottom: 2rem;
+}
+ul {
+    list-style-type: '–';
+    margin-bottom: 2rem;
+}
 #video iframe {
     position: absolute;
     top: 0;
