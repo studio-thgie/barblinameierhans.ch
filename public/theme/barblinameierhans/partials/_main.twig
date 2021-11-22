@@ -24,13 +24,13 @@
 
     {% block header %}
     
-        <h1 class="absolute -top-2 left-0 transform w-full text-6xl text-center md:text-8xl font-medium hidden md:block"
-            :class="header ? 'translate-y-4' : '-translate-y-full'"
+        <h1 class="lg:absolute lg:-top-2 lg:left-0 transform w-full mb-4 lg:mb-0 lg:text-center text-3xl md:text-5xl lg:text-8xl font-medium"
+            :class="header ? 'lg:translate-y-4' : 'lg:-translate-y-full'"
             @mouseover="header = true" @mouseout="header = false"
             x-init="setTimeout(() => { $el.classList.add('transition') }, 250)">
             <span>barblina meierhans</span>
 
-            <button class="absolute -bottom-8 left-1/2 transition" style="width: 20px;">
+            <button class="absolute -bottom-8 left-1/2 transition hidden lg:inline-block" style="width: 20px;">
                 <img src="{{ asset('assets/img/arrow.svg') }}" :style="`transform: rotate(${header ? '' : '-'}90deg);`" alt="Previous Slide">
             </button>
         </h1>
