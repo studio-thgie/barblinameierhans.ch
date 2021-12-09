@@ -6,7 +6,7 @@
 #
 # If enabled, ALL forms will go into debug mode.
 debug:
-    enabled: true
+    enabled: false
     address: noreply@example.com
 
 ## Various SPAM protection measures
@@ -35,7 +35,7 @@ spam-action: mark-as-spam # Either 'block', 'none' or 'mark-as-spam'
 # The namespace is configured in config/packages/twig.yaml
 templates:
     form: '@boltforms/form.html.twig'
-    email: '@boltforms/email_table.html.twig' # Replace with @boltforms/email.html.twig to send simple list-based emails.
+    email: '@boltforms/email.html.twig' # Replace with @boltforms/email.html.twig to send simple list-based emails.
     subject: '@boltforms/subject.html.twig'
     files: '@boltforms/file_browser.twig'
 
@@ -113,17 +113,14 @@ layout:
 contact:
     notification:
         enabled: true
-        debug: false
-        debug_address: name@example.com # Email address used when debug mode is enabled
-        debug_smtp: true
         subject: Your message was submitted
-        subject_prefix: '[Boltforms]'
+        subject_prefix: 'Message via Webseite'
         replyto_name: '{NAME}'                 # Email addresses and names can be either the
         replyto_email: '{EMAIL}'                 # name of a field below or valid text.
-        to_name: 'WebsiteName'
-        to_email: 'youremail@example.org'
-        from_name: 'WebsiteName'
-        from_email: 'youremail@example.org'
+        to_name: 'Adrian'
+        to_email: 'adrian@thgie.ch'
+        from_name: 'barblinameierhans.com'
+        from_email: 'contact@barblinameierhans.com'
     feedback:
         success: Message submission successful
         error: There are errors in the form, please fix before trying to resubmit
@@ -152,17 +149,10 @@ contact:
                 attr:
                     placeholder: Your message...
                     class: myclass
-        needreply:
-            type: choice
-            options:
-                required: false
-                label: Do you want us to contact you back?
-                choices: { 'Yes': 'yes', 'No': 'no' }
-                multiple: false
         submit:
             type: submit
             options:
-                label: Submit my message »
+                label: Submit my message
                 attr:
                     class: button primary
 
