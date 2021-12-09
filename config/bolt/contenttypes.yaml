@@ -49,6 +49,7 @@ pages:
             height: 300px
         contact:
             type: checkbox
+            default: 0
             label: Show Contactform
         slug:
             type: slug
