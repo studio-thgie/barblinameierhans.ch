@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c78f958ff1c03e63be823f729b80a72",
+    "content-hash": "84d63e5d5c70af615ecbcfa212155c8d",
     "packages": [
         {
             "name": "api-platform/core",
@@ -753,6 +753,57 @@
                 }
             ],
             "time": "2021-09-18T08:23:06+00:00"
+        },
+        {
+            "name": "bolt/forms",
+            "version": "1.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/forms.git",
+                "reference": "997c44210aea9756948f6ae8ca3e6b6f3e6c11a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/forms/zipball/997c44210aea9756948f6ae8ca3e6b6f3e6c11a6",
+                "reference": "997c44210aea9756948f6ae8ca3e6b6f3e6c11a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2.9",
+                "twig/twig": "^2.12 || ^3.0"
+            },
+            "require-dev": {
+                "bolt/core": "^4.1",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-doctrine": "^0.12",
+                "phpstan/phpstan-symfony": "^0.12"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "entrypoint": "Bolt\\BoltForms\\Extension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\BoltForms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bobdenotter@gmail.com"
+                }
+            ],
+            "description": "📦 This Bolt extension can be used to handle forms in your Bolt 5 project.",
+            "support": {
+                "issues": "https://github.com/bolt/forms/issues",
+                "source": "https://github.com/bolt/forms/tree/1.4.10"
+            },
+            "time": "2021-11-26T13:14:51+00:00"
         },
         {
             "name": "bolt/newswidget",

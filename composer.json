@@ -8,6 +8,7 @@
         "bolt/article": "^1.0",
         "bolt/assets": "^5.0",
         "bolt/core": "^5.0",
+        "bolt/forms": "^1.4",
         "bolt/newswidget": "^1.1",
         "bolt/redactor": "^1.0",
         "bolt/themes": "^3.3",
