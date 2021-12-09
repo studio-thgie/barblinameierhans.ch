@@ -47,6 +47,9 @@ pages:
         body:
             type: redactor
             height: 300px
+        contact:
+            type: checkbox
+            label: Show Contactform
         slug:
             type: slug
             uses: title

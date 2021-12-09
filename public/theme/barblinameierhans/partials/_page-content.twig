@@ -10,6 +10,9 @@
 </div>
 {% endif %}
 
+{% if page.contact|default(false) %}
+    <p>hello</p>
+{% endif %}
 
 {% if page.gallery and page.gallery|length %}
 <div id="gallery" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">
