@@ -12,7 +12,7 @@
 
 
 {% if page.gallery and page.gallery|length %}
-<div id="gallery" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-4 lg:mt-10 xl:mt-20">
+<div id="gallery" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">
     <div class="swiper swiper-gallery">
       <div class="swiper-wrapper">
         {% for image in record.gallery %}
@@ -51,7 +51,7 @@
 </script>
 {% endif %}
 {% if page.video is not empty %}
-<div id="video" class="text-base md:text-xl xl:text-3xl mb-5">
+<div id="video" class="text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">
     <div class="relative" style="padding-top: 56.25%">
         {{ page.video.html|raw }}
     </div>
