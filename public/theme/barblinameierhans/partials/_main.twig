@@ -28,7 +28,8 @@
             :class="header ? 'lg:translate-y-4' : 'lg:-translate-y-full'"
             @mouseover="header = true" @mouseout="header = false"
             x-init="setTimeout(() => { $el.classList.add('transition') }, 250)">
-            <span>barblina meierhans</span>
+            
+            <a href="/"><span>barblina meierhans</span></a>
 
             <button class="absolute -bottom-8 left-1/2 transition hidden lg:inline-block" style="width: 20px;">
                 <img src="{{ asset('assets/img/arrow.svg') }}" :style="`transform: rotate(${header ? '' : '-'}90deg);`" alt="Previous Slide">
