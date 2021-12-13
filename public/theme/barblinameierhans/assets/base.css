@@ -46,3 +46,23 @@ h1 {
         display: none;
     }
 }
+
+/* contact */
+#contact label {
+    display: none;
+}
+#contact input, #contact textarea {
+    border: 6px solid black;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 15px;
+}
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+}
+#contact input[type="submit"] {
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    float: right;
+}

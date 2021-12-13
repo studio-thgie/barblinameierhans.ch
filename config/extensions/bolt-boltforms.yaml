@@ -131,28 +131,28 @@ contact:
                 required: true
                 label: Name
                 attr:
-                    placeholder: Your name...
+                    placeholder: Your Name
                 constraints: [ NotBlank, { Length: { 'min': 3, 'max': 128 } } ]
         email:
             type: email
             options:
                 required: true
-                label: Email address
+                label: Your Email
                 attr:
-                    placeholder: Your email...
+                    placeholder: Your Email
                 constraints: [ NotBlank, Email ]
         message:
             type: textarea
             options:
                 required: true
-                label: Your message
+                label: Your Message
                 attr:
-                    placeholder: Your message...
+                    placeholder: Your Message
                     class: myclass
         submit:
             type: submit
             options:
-                label: Submit my message
+                label: Send
                 attr:
                     class: button primary
 
