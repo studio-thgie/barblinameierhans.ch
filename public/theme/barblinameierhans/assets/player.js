@@ -41,6 +41,8 @@ audio_players.forEach((el) => {
 
   //toggle between playing and pausing on button click
   const playBtn = audioPlayer.querySelector(".controls .toggle-play");
+  const pauseBtn = audioPlayer.querySelector(".controls .toggle-pause");
+  const stopBtn = audioPlayer.querySelector(".controls .toggle-stop");
   playBtn.addEventListener(
     "click",
     () => {
@@ -53,6 +55,28 @@ audio_players.forEach((el) => {
         playBtn.classList.add("play");
         audio.pause();
       }
+    },
+    false
+  );
+  pauseBtn.addEventListener(
+    "click",
+    () => {
+      if (audio.paused) {
+        playBtn.classList.remove("play");
+        playBtn.classList.add("pause");
+        audio.play();
+      } else {
+        playBtn.classList.remove("pause");
+        playBtn.classList.add("play");
+        audio.pause();
+      }
+    },
+    false
+  );
+  stopBtn.addEventListener(
+    "click",
+    () => {
+      audio.stop();
     },
     false
   );

@@ -99,7 +99,6 @@ h1 {
     transition: 0.25s;
     border-right: 5px solid black;
 }
-.audio-player .controls > * {
-    width: 24px;
-    height: 24px;
+.audio-player .controls img {
+    height: 28px;
 }
