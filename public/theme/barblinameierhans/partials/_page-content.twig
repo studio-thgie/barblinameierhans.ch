@@ -64,34 +64,24 @@
 </div>
 {% endif %}
 {% if page.audio is not empty %}
-<audio controls>
+<audio controls class="hidden">
     <source src="{{ page.audio }}" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-<div class="audio-player" style="margin: 0 auto">
+<div class="audio-player" data-file="{{ page.audio }}">
+    <div class="name">{{ page.audio.name }}</div>
+    <div class="time flex justify-between">
+        <div class="current">0:00</div>
+        <div class="length"></div>
+    </div>
     <div class="timeline">
         <div class="progress"></div>
     </div>
     <div class="controls">
         <div class="play-container">
-            <div class="toggle-play play">
-            </div>
-        </div>
-        <div class="time">
-            <div class="current">0:00</div>
-            <div class="divider">/</div>
-            <div class="length"></div>
-        </div>
-        <div class="name">Music Song</div>
-        <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
-        <div class="volume-container">
-            <div class="volume-button">
-                <div class="volume icono-volumeMedium"></div>
-            </div>
-
-            <div class="volume-slider">
-                <div class="volume-percentage"></div>
-            </div>
+            <div class="toggle-play play"></div>
+            <div class="toggle-pause pause"></div>
+            <div class="toggle-stop stop"></div>
         </div>
     </div>
 </div>
