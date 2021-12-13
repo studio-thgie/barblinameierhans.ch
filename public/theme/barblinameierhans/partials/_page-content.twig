@@ -63,8 +63,8 @@
     </div>
 </div>
 {% endif %}
-{% if page.audio is not empty %}
-    {% for audio in page.audio %}
+{% if page.audio_files is not empty %}
+    {% for audio in page.audio_files %}
     <audio controls class="hidden">
         <source src="{{ audio }}" type="audio/mpeg">
         Your browser does not support the audio element.

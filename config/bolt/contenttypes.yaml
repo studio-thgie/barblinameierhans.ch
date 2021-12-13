@@ -102,7 +102,7 @@ projects:
             type: imagelist
         video:
             type: embed
-        audio:
+        audio_files:
             type: filelist
         body:
             type: redactor
