@@ -76,7 +76,7 @@ audio_players.forEach((el) => {
   stopBtn.addEventListener(
     "click",
     () => {
-      audio.stop();
+      audio.pause();
     },
     false
   );
