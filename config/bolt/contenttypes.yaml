@@ -103,7 +103,7 @@ projects:
         video:
             type: embed
         audio:
-            type: file
+            type: filelist
         body:
             type: redactor
             height: 300px
