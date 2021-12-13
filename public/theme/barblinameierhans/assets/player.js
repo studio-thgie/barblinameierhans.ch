@@ -8,7 +8,7 @@ let audio_players = document.querySelectorAll('.audio-player');
 
 audio_players.forEach((el) => {
   const audioPlayer = el;
-  const audio = new Audio(audioPlayer.data.file);
+  const audio = new Audio(audioPlayer.dataset.file);
   //credit for song: Adrian kreativaweb@gmail.com
 
   audio.addEventListener(
