@@ -60,7 +60,7 @@ h1 {
 #contact input:focus, #contact textarea:focus {
     outline: none;
 }
-#contact input[type="submit"] {
+#contact button[type="submit"] {
     padding: 10px 15px;
     background: black;
     color: white;
