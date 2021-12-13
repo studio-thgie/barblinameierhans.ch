@@ -11,7 +11,7 @@
 {% endif %}
 
 {% if page.contact|default(false) %}
-<div id="contact" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">    
+<div id="contact" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">
     {{ boltform('contact') }}
 </div>
 {% endif %}
@@ -19,21 +19,21 @@
 {% if page.gallery and page.gallery|length %}
 <div id="gallery" class="relative text-base md:text-xl xl:text-3xl mb-5 mt-10 lg:mt-18 xl:mt-24">
     <div class="swiper swiper-gallery">
-      <div class="swiper-wrapper">
-        {% for image in record.gallery %}
+        <div class="swiper-wrapper">
+            {% for image in record.gallery %}
             <div class="swiper-slide">
                 <img src="{{ image|thumbnail(1200) }}" alt="{{ image.alt|default(page|title) }}">
             </div>
-        {% endfor %}
-      </div>
-      <div class="swiper-pagination"></div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
 
     <div class="swiper-button-next">
-    <img src="{{ asset('assets/img/arrow.svg') }}"  alt="Next Slide">
+        <img src="{{ asset('assets/img/arrow.svg') }}" alt="Next Slide">
     </div>
     <div class="swiper-button-prev">
-    <img src="{{ asset('assets/img/arrow.svg') }}" style="transform: rotate(180deg);" alt="Previous Slide">
+        <img src="{{ asset('assets/img/arrow.svg') }}" style="transform: rotate(180deg);" alt="Previous Slide">
     </div>
 </div>
 <script>
@@ -53,6 +53,7 @@
             },
         });
     });
+
 </script>
 {% endif %}
 {% if page.video is not empty %}
@@ -63,8 +64,35 @@
 </div>
 {% endif %}
 {% if page.audio is not empty %}
- <audio controls>
+<audio controls>
     <source src="{{ page.audio }}" type="audio/mpeg">
     Your browser does not support the audio element.
-</audio> 
+</audio>
+<div class="audio-player" style="margin: 0 auto">
+    <div class="timeline">
+        <div class="progress"></div>
+    </div>
+    <div class="controls">
+        <div class="play-container">
+            <div class="toggle-play play">
+            </div>
+        </div>
+        <div class="time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
+        <div class="volume-container">
+            <div class="volume-button">
+                <div class="volume icono-volumeMedium"></div>
+            </div>
+
+            <div class="volume-slider">
+                <div class="volume-percentage"></div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endif %}
