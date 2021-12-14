@@ -122,6 +122,7 @@ input:-moz-placeholder {
     top: -5px;
     width: 0%;
     height: 15px;
+    transition: 1s;
     border-right: 5px solid black;
 }
 

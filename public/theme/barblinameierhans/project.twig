@@ -29,12 +29,17 @@
         <div class="flex justify-between mb-10">
             {% if record.video is not empty %}
                 <div>
-                    <a class="w-1/2 inline pt-1 px-1 text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#video">Video</a>
+                    <a class="w-1/3 inline pt-1 px-1 text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#video">Video</a>
                 </div>
             {% endif %}
             {% if record.gallery is not empty %}
                 <div>
-                    <a class="w-1/2 inline pt-1 px-1 text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#gallery">Photo</a>
+                    <a class="w-1/3 inline pt-1 px-1 text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#gallery">Photo</a>
+                </div>
+            {% endif %}
+            {% if record.audio_files is not empty %}
+                <div>
+                    <a class="w-1/3 inline pt-1 px-1 text-xl md:text-3xl xl:text-6xl mb-4 hover:bg-black hover:text-white" href="#audio">Audio</a>
                 </div>
             {% endif %}
         </div>

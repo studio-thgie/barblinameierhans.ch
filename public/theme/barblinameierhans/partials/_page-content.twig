@@ -64,6 +64,7 @@
 </div>
 {% endif %}
 {% if page.audio_files is not empty %}
+<div id="audio">
     {% for audio in page.audio_files %}
     <audio controls class="hidden">
         <source src="{{ audio }}" type="audio/mpeg">
@@ -91,4 +92,5 @@
         </div>
     </div>
     {% endfor %}
+</div>
 {% endif %}
