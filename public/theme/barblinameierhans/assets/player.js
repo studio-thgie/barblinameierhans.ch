@@ -77,6 +77,7 @@ audio_players.forEach((el) => {
     "click",
     () => {
       audio.pause();
+      audio.currentTime = 0;
     },
     false
   );
