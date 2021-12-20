@@ -12,7 +12,7 @@
 <div>
     <span class="text-3xl md:text-5xl lg:text-8xl">barblina meierhans</span>
     {% if record.image is not empty %}
-        <img src="{{ page.image|thumbnail(1200) }}" alt="{{ page.image.alt|default(page|title) }}">
+        <img src="{{ record.image|thumbnail(1200) }}" alt="{{ record.image.alt|default(record|title) }}">
     {% endif %}
 </div>
 
