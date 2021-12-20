@@ -13,6 +13,9 @@ homepage:
             class: large
             group: content
             label: Title
+        image:
+            type: image
+            label: Highlighted image
         slug:
             type: slug
             uses: title
