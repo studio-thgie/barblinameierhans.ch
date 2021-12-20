@@ -1,6 +1,10 @@
 {% extends 'partials/_main.twig' %}
 
-{% block header %}{% endblock header %}
+{% block header %}
+<h1 class="lg:absolute lg:-top-2 lg:left-0 transform w-full mb-4 lg:mb-0 lg:text-center text-3xl md:text-5xl lg:text-8xl font-medium lg:translate-y-4">
+    <a href="/"><span>barblina meierhans</span></a>
+</h1>
+{% endblock header %}
 
 {% block body %}
 
@@ -10,7 +14,6 @@
 </div>
 
 <div>
-    <span class="inline-block w-full text-center mb-10 text-3xl md:text-5xl lg:text-8xl">barblina meierhans</span>
     {% if record.image is not empty %}
         <img class="w-full md:w-2/3 mx-auto" src="{{ record.image|thumbnail(1200) }}" alt="{{ record.image.alt|default(record|title) }}">
     {% endif %}
