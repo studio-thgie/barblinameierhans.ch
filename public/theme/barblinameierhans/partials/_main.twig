@@ -24,7 +24,7 @@
 
     {% block header %}
     
-        <h1 class="lg:absolute lg:-top-2 lg:left-0 transform w-full mb-4 lg:mb-0 lg:text-center text-3xl md:text-5xl lg:text-8xl font-medium"
+        <h1 class="lg:absolute lg:-top-2 lg:left-0 transform w-full mb-4 lg:mb-0 lg:text-center text-4xl md:text-6xl lg:text-8xl font-medium"
             :class="header ? 'lg:translate-y-4' : 'lg:-translate-y-full'"
             @mouseover="header = true" @mouseout="header = false"
             x-init="setTimeout(() => { $el.classList.add('transition') }, 250)">
