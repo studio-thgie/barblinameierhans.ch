@@ -6,13 +6,13 @@
 
 <div class="fixed top-0 left-0 w-screen h-screen bg-white flex flex-wrap content-center justify-around"
     x-data="{ intro: true }" x-show="intro" x-transition x-init="setTimeout(() => { intro = false; }, 1000)">
-    <span class="text-4xl sm:text-6xl lg:text-8xl">barblina meierhans</span>
+    <span class="text-3xl md:text-5xl lg:text-8xl">barblina meierhans</span>
 </div>
 
 <div>
-    <span class="text-3xl md:text-5xl lg:text-8xl">barblina meierhans</span>
+    <span class="inline-block w-full text-center mb-10 text-3xl md:text-5xl lg:text-8xl">barblina meierhans</span>
     {% if record.image is not empty %}
-        <img src="{{ record.image|thumbnail(1200) }}" alt="{{ record.image.alt|default(record|title) }}">
+        <img class="w-full md:w-2/3 mx-auto" src="{{ record.image|thumbnail(1200) }}" alt="{{ record.image.alt|default(record|title) }}">
     {% endif %}
 </div>
 
