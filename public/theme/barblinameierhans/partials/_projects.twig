@@ -17,7 +17,10 @@
             {% if project.gallery %}
                 {% set image = project.gallery|first %}
                 <img src="{{ image|thumbnail(1200) }}">
-                {% set rendered_image = true %}
+            {% else %}
+                {% set project = projects|shuffle|first %}
+                {% set image = project.gallery|first %}
+                <img src="{{ image|thumbnail(1200) }}">
             {% endif %}
         </div>
     </div>
