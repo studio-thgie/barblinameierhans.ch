@@ -14,12 +14,12 @@
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
             {% set break = false %}
-            {% for project in projects if not break %}
+            {% for project in projects|shuffle if not break %}
                 {% if project.gallery %}
                     {% set break = true %}
                     {% set image = project.gallery|shuffle|first %}
                     <img src="{{ image|thumbnail(1200) }}">
                 {% endif %}
-            [% endfor %}
+            {% endfor %}
         </div>
     </div>
