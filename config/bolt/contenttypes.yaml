@@ -110,6 +110,8 @@ projects:
         body:
             type: redactor
             height: 300px
+        other_files:
+            type: filelist
         slug:
             type: slug
             uses: title

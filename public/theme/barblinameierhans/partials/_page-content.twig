@@ -7,6 +7,13 @@
 {% if page.body != '' %}
 <div class="text-base md:text-xl xl:text-3xl mt-4 lg:mt-10 xl:mt-20">
     {{ page.body }}
+    {% if page.other_files and page.other_files|length %}
+        <ul>
+            {% for file in page.other_files %}
+                <li>{{ dump(file) }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 {% endif %}
 
