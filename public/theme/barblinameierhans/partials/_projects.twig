@@ -13,7 +13,8 @@
             </ul>
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
-            {% for project in projects|shuffle %}
+            {% set break = false %}
+            {% for project in projects|shuffle if not break %}
                 <li>
                     <div class="block md:inline-block relative">
                         <a href="{{ project|link }}">
@@ -21,6 +22,7 @@
                         </a>
                     </div>
                 </li>
+                {% set break = true %}
             {% endfor %}
         </div>
     </div>
