@@ -10,7 +10,7 @@
     {% if page.other_files and page.other_files|length %}
         <ul>
             {% for file in page.other_files %}
-                <li><a href="#">{{ file.name }}</a></li>
+                <li><a href="{{ file.filename }}">{{ file.title }}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
