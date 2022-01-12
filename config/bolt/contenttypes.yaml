@@ -114,8 +114,7 @@ projects:
             type: slug
             uses: title
     record_template: project.twig
-    records_per_page: 10
-    order: id
+    records_per_page: 50
 
 # Possible field types:
 #
