@@ -5,7 +5,7 @@
 <div class="md:flex">
     <div class="sm:pr-2 md:pr-4 lg:pr-8 xl:pr-16 md:w-2/5">
         <div class="mb-10">
-            {% set related_records = record|related %}
+            {% set related_records = record|related|sort %}
             {% if related_records is not empty and related_records|length > 1 %}
                 {% for related in related_records %}
                     <a href="{{ related|link }}">
