@@ -16,7 +16,7 @@
             {% set break = false %}
             {% for project in projects|shuffle %}
                 {% if not break %}
-                    {% if project.gallery %}
+                    {% if project.gallery|length %}
                         {% set image = project.gallery|shuffle|first %}
                         <img src="{{ image|thumbnail(1200) }}">
                         {% set break = true %}
