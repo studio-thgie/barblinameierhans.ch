@@ -21,8 +21,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-main p a,
-main ul a {
+.page-body a {
     background: black;
     color: white;
 }
