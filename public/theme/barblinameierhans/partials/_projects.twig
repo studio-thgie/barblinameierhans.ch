@@ -16,15 +16,12 @@
             {% set break = false %}
             {% for project in projects|shuffle %}
                 {% if not break %}
-                <li>
-                    <div class="block md:inline-block relative">
-                        <a href="{{ project|link }}">
-                            {% include 'partials/_sub-nav-item.twig' with { 'item': project } %}
-                        </a>
-                    </div>
-                </li>
+                    {% if project.gallery %}
+                        {% set image = project.gallery|shuffle|first %}
+                        <img src="{{ image|thumbnail(1200) }}">
+                        {% set break = true %}
+                    {% endif %}
                 {% endif %}
-                {% set break = true %}
             {% endfor %}
         </div>
     </div>
