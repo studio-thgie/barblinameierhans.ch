@@ -4,6 +4,7 @@
 
 <div>
     {% setcontent projects = 'project' where { category: 'Composition' } %}
+    {% setcontent random_project = 'project' where { category: 'Composition' } random limit 1 %}
     {% include 'partials/_projects.twig' %}
 </div>
 

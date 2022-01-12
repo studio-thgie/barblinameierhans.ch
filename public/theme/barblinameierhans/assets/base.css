@@ -21,6 +21,11 @@ h1 {
     margin-bottom: 2rem;
 }
 
+main p a {
+    background: black;
+    color: white;
+}
+
 #video iframe {
     position: absolute;
     top: 0;
