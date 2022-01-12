@@ -16,11 +16,6 @@
             {% set break = false %}
             {% set _projects = projects|shuffle %}
             {% for _project in _projects if not break %}
-                {% if _project.gallery %}
-                    {% set break = true %}
-                    {% set image = _project.gallery|first %}
-                    <img src="{{ image|thumbnail(1200) }}">
-                {% endif %}
             {% endfor %}
         </div>
     </div>
