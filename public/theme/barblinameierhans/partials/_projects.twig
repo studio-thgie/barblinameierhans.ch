@@ -13,14 +13,11 @@
             </ul>
         </div>
         <div class="md:pl-5 xl:pl-16 md:w-1/2">
-            {% set project = projects|shuffle|first %}
-            {% if project.gallery %}
-                {% set image = project.gallery|first %}
-                <img src="{{ image|thumbnail(1200) }}">
-            {% else %}
-                {% set project = projects|shuffle|first %}
-                {% set image = project.gallery|first %}
-                <img src="{{ image|thumbnail(1200) }}">
-            {% endif %}
+            {% for project in projects|shuffle %}
+                {% if project.gallery %}
+                    {% set image = project.gallery|shuffle|first %}
+                    <img src="{{ image|thumbnail(1200) }}">
+                {% endif %}
+            [% endfor %}
         </div>
     </div>
