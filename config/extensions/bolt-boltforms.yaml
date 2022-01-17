@@ -117,8 +117,8 @@ contact:
         subject_prefix: 'Message via Webseite'
         replyto_name: '{NAME}'                 # Email addresses and names can be either the
         replyto_email: '{EMAIL}'                 # name of a field below or valid text.
-        to_name: 'Adrian'
-        to_email: 'adrian@thgie.ch'
+        to_name: 'Barblina Meierhans'
+        to_email: 'barblinameierhans@gmail.com'
         from_name: 'barblinameierhans.com'
         from_email: 'contact@barblinameierhans.com'
     feedback:
