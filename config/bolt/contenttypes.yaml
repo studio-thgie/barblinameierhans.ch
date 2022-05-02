@@ -50,6 +50,8 @@ pages:
         body:
             type: redactor
             height: 300px
+        other_files:
+          type: filelist
         contact:
             type: checkbox
             default: 0
